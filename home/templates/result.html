@@ -1,0 +1,26 @@
+{% extends 'base-two.html' %}
+{% block content %}
+<div class="results-container">
+    <div class="results-box">
+        <h2>✨ Diagnosis Result</h2>
+        <p class="detected-label">We analyzed your image and found the following:</p>
+        <ul class="conditions-list">=
+                <li>🌿 {{ diagnosis.result|capfirst }}</li>=
+        </ul>
+    </div>
+
+    <div class="products-section">
+        <h3>💖 Recommended Products</h3>
+        <div class="product-grid">
+            {% for product in products %}
+                <div class="product-card">
+                    <img src="{{ product.image_url }}" alt="{{ product.name }}">
+                    <h4>{{ product.name|truncatechars:40 }}</h4>
+                    <p>{{ product.description|truncatechars:90 }}</p>
+                    <button class="add-cart-btn">Add to Cart</button>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

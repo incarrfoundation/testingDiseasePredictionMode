@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="upload-container">
+    <div class="upload-card">
+        <h2>💖 Skin Diagnosis</h2>
+        <p class="sub-text">Upload a clear photo of your face and let our AI recommend the perfect skincare just for you.</p>
+        <form method="post" enctype="multipart/form-data" class="upload-form">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.image.label_tag }}
+                {{ form.image }}
+            </div>
+            <button type="submit" class="upload-btn">✨ Analyze My Skin</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
