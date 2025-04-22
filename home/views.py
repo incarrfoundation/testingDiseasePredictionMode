@@ -46,5 +46,6 @@ def upload_view(request):
 
 def result_view(request):
     result = request.session.get('result_data', {})
+    print(result)
     products = Product.objects.all()
     return render(request, 'result.html', {'result': result, 'products': products})

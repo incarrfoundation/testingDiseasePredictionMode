@@ -9,7 +9,11 @@
                 <li>🌿 Skin Condition: {{ result.condition|capfirst }}</li>
                 <li>🌿 Model Confidence: {{ result.confidence|capfirst }}</li>
                 <li>🌿 Recommendation Type: {{ result.recommendation_type|capfirst }}</li>
+                {% if result.message %}
                 <li><span style="margin-bottom: 5px; font-weight: bold; text-decoration: underline;">Message</span><br> The {{ result.message|capfirst }}</li>
+                {% else %}
+                <li><span style="margin-bottom: 5px; font-weight: bold; text-decoration: underline;">Message</span><br> Below is your products recommendation based on your skin type</li>
+                {% endif %}
                 =
         </ul>
     </div>
