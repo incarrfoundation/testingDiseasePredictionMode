@@ -4,8 +4,13 @@
     <div class="results-box">
         <h2>✨ Diagnosis Result</h2>
         <p class="detected-label">We analyzed your image and found the following:</p>
-        <ul class="conditions-list">=
-                <li>🌿 {{ diagnosis.result|capfirst }}</li>=
+        <ul class="conditions-list">
+                =
+                <li>🌿 Skin Condition: {{ result.condition|capfirst }}</li>
+                <li>🌿 Model Confidence: {{ result.confidence|capfirst }}</li>
+                <li>🌿 Recommendation Type: {{ result.recommendation_type|capfirst }}</li>
+                <li><span style="margin-bottom: 5px; font-weight: bold; text-decoration: underline;">Message</span><br> The {{ result.message|capfirst }}</li>
+                =
         </ul>
     </div>
 
