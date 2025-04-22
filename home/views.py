@@ -20,23 +20,6 @@ def analyze_the_image(image_path):
         raise Exception(f"API error: {response.status_code} - {response.text}")
 
 
-# def upload_view(request):
-#     if request.method == 'POST':
-#         form = UploadForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             uploaded = form.save()
-#             result = analyze_image(uploaded.image.path)
-
-#             diagnosis = Diagnosis.objects.create(
-#                 image=uploaded,
-#                 result=", ".join(result['conditions']),
-#                 recommended_products=", ".join(map(str, result['products']))
-#             )
-#             return redirect('result', diagnosis_id=diagnosis.id)
-#     else:
-#         form = UploadForm()
-#     return render(request, 'upload.html', {'form': form})
-
 
 def upload_view(request):
     if request.method == 'POST':
@@ -48,6 +31,7 @@ def upload_view(request):
                 # Send image to your AI model
                 result = analyze_the_image(uploaded.image.path)
                 print(result)
+                print("Henry")
                 # Store result in session
                 request.session['result_data'] = result
 
