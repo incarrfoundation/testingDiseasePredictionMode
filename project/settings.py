@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qjx^vzeg#^fm9$1341djx6dowm73smjd%1j(tve*h^7+6d-b7*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['skin-disease-prediction-zek7.onrender.com', '127.0.0.1']
 
