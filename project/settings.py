@@ -3,17 +3,13 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-qjx^vzeg#^fm9$1341djx6dowm73smjd%1j(tve*h^7+6d-b7*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['skin-disease-prediction-zek7.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['skin-disease-prediction-zek7.onrender.com', 'testingdiseasepredictionmode.onrender.com', '127.0.0.1']
 
 
 # Application definition
