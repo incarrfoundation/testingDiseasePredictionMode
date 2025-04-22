@@ -30,11 +30,8 @@ def upload_view(request):
             try:
                 # Send image to your AI model
                 result = analyze_the_image(uploaded.image.path)
-                print(result)
-                print("Henry")
                 # Store result in session
                 request.session['result_data'] = result
-
                 # Redirect to results page
                 return redirect('result')
 
